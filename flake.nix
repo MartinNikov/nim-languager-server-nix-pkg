@@ -1,10 +1,5 @@
 {
-  description = "nix-blockchain-development";
-
-  nixConfig = {
-    extra-substituters = "https://nix-blockchain-development.cachix.org";
-    extra-trusted-public-keys = "nix-blockchain-development.cachix.org-1:Ekei3RuW3Se+P/UIo6Q/oAgor/fVhFuuuX5jR8K/cdg=";
-  };
+  description = "langserver";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
