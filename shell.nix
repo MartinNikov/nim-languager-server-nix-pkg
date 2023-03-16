@@ -3,10 +3,10 @@ with pkgs;
   mkShell {
     packages =
       [
-        metacraft-lab.langserver
+        metacraft-labs.langserver
       ];
 
     shellHook = ''
-      figlet -w$COLUMNS "nix-blockchain-development"
+      figlet -w$COLUMNS "langserver"
     '';
   }

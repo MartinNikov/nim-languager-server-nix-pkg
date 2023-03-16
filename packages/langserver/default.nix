@@ -1,8 +1,8 @@
-{ lib, buildNimPackage, fetchFromGitHub, SDL2 }:
+{ lib, nimPackages, fetchFromGitHub, SDL2 }:
 
-buildNimPackage rec {
+nimPackages.buildNimPackage rec {
   pname = "langserver";
-  version = "0.1.0";
+  version = "1.6.10";
   nimBinOnly = true;
   src = fetchFromGitHub {
     owner = "nim-lang";
