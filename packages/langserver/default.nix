@@ -1,4 +1,4 @@
-{ lib, nimPackages, fetchFromGitHub, SDL2, faststreams, asynctools, stew }:
+{ lib, nimPackages, fetchFromGitHub, SDL2, faststreams, asynctools, stew, json-rpc }:
 
 nimPackages.buildNimPackage rec {
   pname = "langserver";
@@ -11,7 +11,7 @@ nimPackages.buildNimPackage rec {
     hash = "sha256-wkD9+6p8Volp0WwRfLej7QkvsCHXL6B7uPHWBaDpMDw=";
   };
 
-  propagatedBuildInputs = [ faststreams asynctools stew ];
+  propagatedBuildInputs = [ faststreams asynctools stew json-rpc ];
 
   doCheck = true;
 }
