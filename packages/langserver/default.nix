@@ -3,7 +3,6 @@
 nimPackages.buildNimPackage rec {
   pname = "langserver";
   version = "1.6.10";
-  nimBinOnly = true;
   src = fetchFromGitHub {
     owner = "nim-lang";
     repo = "langserver";
