@@ -1,4 +1,4 @@
-{ lib, nimPackages, fetchFromGitHub, SDL2 }:
+{ lib, nimPackages, fetchFromGitHub, SDL2, faststream }:
 
 nimPackages.buildNimPackage rec {
   pname = "langserver";
@@ -10,4 +10,8 @@ nimPackages.buildNimPackage rec {
     rev = "dbaff403fa7f785d1b6afeff890dd6f903cb8b49";
     hash = "sha256-wkD9+6p8Volp0WwRfLej7QkvsCHXL6B7uPHWBaDpMDw=";
   };
+
+  propagatedBuildInputs = [ faststream ];
+
+  doCheck = true;
 }

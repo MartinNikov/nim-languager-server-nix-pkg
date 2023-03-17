@@ -4,6 +4,7 @@ with pkgs;
     packages =
       [
         metacraft-labs.langserver
+        metacraft-labs.faststream
       ];
 
     shellHook = ''
