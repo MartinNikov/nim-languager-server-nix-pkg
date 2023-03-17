@@ -1,18 +1,10 @@
 _finalNixpkgs: prevNixpkgs: let
-  langserver = prevNixpkgs.callPackage ./packages/langserver/default.nix {};
-  faststream = prevNixpkgs.python3Packages.cattrs.overrideAttrs (finalAttrs: previousAttrs: {
-    src = prevNixpkgs.fetchFromGitHub {
-      owner = "status-im";
-      repo = "nim-faststreams";
-      rev = "814f8927e1f356f39219f37f069b83066bcc893a";
-      hash = "sha256-qVwGLXlhJXhdyXpFpujFrLf0tVQIbOzfqg1ZAM+U2B4=";
-    };
-  patches = [];
-  });
-  
+  langserver = prevNixpkgs.callPackage ./packages/langserver/default.nix { inherit faststreams; };
+  faststreams = prevNixpkgs.callPackage ./packages/faststreams/default.nix {};
+
 in {
   metacraft-labs = rec {
     inherit langserver;
-    inherit faststream;
+    inherit faststreams;
   };
 }
