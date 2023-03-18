@@ -1,8 +1,8 @@
 { fetchFromGitHub }:
 
 fetchFromGitHub {
-  owner = "cheatfate";
+  owner = "yyoncho";
   repo = "asynctools";
-  rev = "84ced6d002789567f2396c75800ffd6dff2866f7";
-  hash = "sha256-mrO+WeSzCBclqC2UNCY+IIv7Gs8EdTDaTeSgXy3TgNM=";
+  rev = "non-blocking";
+  hash = "sha256-bV37Q4X65tflvEUiG3OqNKWjI/R6JQ5O5Q6vvMcU2cc=";
 }
