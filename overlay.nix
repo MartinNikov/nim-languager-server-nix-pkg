@@ -1,9 +1,9 @@
 _finalNixpkgs: prevNixpkgs: let
-  langserver = prevNixpkgs.callPackage ./packages/langserver/default.nix { inherit faststreams; inherit asynctools; inherit stew; inherit json-rpc; };
+  langserver = prevNixpkgs.callPackage ./packages/langserver/default.nix { inherit faststreams; inherit asynctools; inherit stew; inherit json_rpc; };
   faststreams = prevNixpkgs.callPackage ./packages/faststreams/default.nix {};
   asynctools = prevNixpkgs.callPackage ./packages/asynctools/default.nix {};
   stew = prevNixpkgs.callPackage ./packages/stew/default.nix {};
-  json-rpc = prevNixpkgs.callPackage ./packages/json-rpc/default.nix {};
+  json_rpc = prevNixpkgs.callPackage ./packages/json-rpc/default.nix {};
 
 in {
   metacraft-labs = rec {
@@ -11,6 +11,6 @@ in {
     inherit faststreams;
     inherit asynctools;
     inherit stew;
-    inherit json-rpc;
+    inherit json_rpc;
   };
 }
