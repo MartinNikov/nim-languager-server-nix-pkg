@@ -1,4 +1,4 @@
-{ lib, nimPackages, fetchFromGitHub, SDL2, faststreams, asynctools, stew, json-rpc, chronicles, json-serialization, serialization }:
+{ lib, nimPackages, fetchFromGitHub, SDL2, faststreams, asynctools, stew, json-rpc, chronicles, json-serialization, serialization, zevv-with }:
 
 nimPackages.buildNimPackage rec {
   pname = "langserver";
@@ -10,7 +10,7 @@ nimPackages.buildNimPackage rec {
     hash = "sha256-wkD9+6p8Volp0WwRfLej7QkvsCHXL6B7uPHWBaDpMDw=";
   };
 
-  propagatedBuildInputs = [ faststreams asynctools stew json-rpc chronicles json-serialization serialization ];
+  propagatedBuildInputs = [ faststreams asynctools stew json-rpc chronicles json-serialization serialization zevv-with ];
 
   doCheck = true;
 }
