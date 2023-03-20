@@ -1,0 +1,1 @@
+nix build --print-build-logs --json .#packages.x86_64-linux.langserver
