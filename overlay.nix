@@ -20,5 +20,6 @@ in {
     inherit json-serialization;
     inherit serialization;
     inherit zevv-with;
+    default = langserver;
   };
 }
