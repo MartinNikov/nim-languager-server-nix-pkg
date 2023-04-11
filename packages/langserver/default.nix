@@ -13,6 +13,8 @@ nimPackages.buildNimPackage rec {
   propagatedBuildInputs = [ faststreams asynctools stew json-rpc chronicles json-serialization serialization zevv-with ];
 
   doCheck = true;
+  nimRelease = false;
+  nimDefines = [ "debug" ];
 
   meta = with lib; {
     mainProgram = "nimlangserver";
