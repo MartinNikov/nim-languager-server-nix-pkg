@@ -6,8 +6,8 @@ nimPackages.buildNimPackage rec {
   src = fetchFromGitHub {
     owner = "nim-lang";
     repo = "langserver";
-    rev = "dbaff403fa7f785d1b6afeff890dd6f903cb8b49";
-    hash = "sha256-wkD9+6p8Volp0WwRfLej7QkvsCHXL6B7uPHWBaDpMDw=";
+    rev = "0ffa2323cf956abde645f5c0ee4649fa5206d80f";
+    hash = "sha256-eaAJOjVWchw2ZlDC00qdAvZJjmvxXyPEjT4bb9rTXVk=";
   };
 
   propagatedBuildInputs = [ faststreams asynctools stew json-rpc chronicles json-serialization serialization zevv-with ];
