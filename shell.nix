@@ -3,6 +3,7 @@ with pkgs;
   mkShell {
     packages =
       [
+        figlet
         metacraft-labs.langserver
       ];
 
